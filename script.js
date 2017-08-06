@@ -2,10 +2,10 @@ var windowHeight = innerHeight - 50;
 var windowWidth = innerWidth - 50;
 var lineLength = 150;
 
-var svg = d3.select("body")
+var svg = d3.select("#svg-container")
     .append("svg")
-    .attr("width", windowWidth)
-    .attr("height", windowHeight);
+    .attr("width", 500)
+    .attr("height", 500);
 
 var polygon = undefined;
 

@@ -5,16 +5,29 @@
     <link rel="shortcut icon" href="https://www.glassdoor.com/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+<div style="margin-top: 1em">
+    <h2>select range</h2>
+    3<input id="price" type="range" min="3" max="20" value="10" />20
+</div>
+
+<p id="result">10</p>
+
+
+<div id="svg-container"> </div>
+
     <script src="script.js">
     </script>
 
-<!--<svg width="50" height="50">
-  <polygon fill="yellow" stroke="blue" stroke-width="2"
-    points="05,30
-            15,10
-            25,30" />
-</svg>-->
-
-
 </body>
 </html>
+
+<script>
+var p = document.getElementById("price"),
+    res = document.getElementById("result");
+
+p.addEventListener("input", function() {
+    res.innerHTML = p.value;
+    drawPolygon(p.value);
+}, false); 
+ </script>
